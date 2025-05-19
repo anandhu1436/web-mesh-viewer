@@ -7,70 +7,62 @@ container.style.alignItems = "center";
 container.style.flexDirection = "column";
 document.body.appendChild(container);
 
+// Extract folder name from URL path
+// const pathParts = window.location.pathname.split('/');
+
+// Get folder name from URL like ?folder=lin
+const urlParams = new URLSearchParams(window.location.search);
+const targetFolder = urlParams.get("folder") || "default";  // fallback if not given
+
+
 fetch("assets/js/mesh_list.json")
   .then(res => res.json())
   .then(folders => {
+    const folder = folders.find(f => f.folder === targetFolder);
+    if (!folder) {
+      const msg = document.createElement("p");
+      msg.innerText = `Folder "${targetFolder}" not found.`;
+      msg.style.fontSize = "20px";
+      msg.style.color = "red";
+      container.appendChild(msg);
+      return;
+    }
+
+    const groups = [
+      { label: "Strokes", files: folder.files.filter(f => f.toLowerCase().includes("strokes")) },
+      { label: "Marching", files: folder.files.filter(f => f.toLowerCase().includes("circumspheres")) },
+      { label: "Final", files: folder.files.filter(f => f.toLowerCase().includes("final")) }
+    ];
+
     const table = document.createElement("table");
     table.style.borderCollapse = "collapse";
-    table.style.borderCollapse = "collapse";
-    table.style.marginTop = "200px";  // 👈 Add space above the table
-    // table.style.tableLayout = "fixed";  // 👈 Add this to ensure fixed column widths
+    table.style.marginTop = "100px";
     container.appendChild(table);
 
-    // Determine the maximum number of files across all folders
-    const maxColumns = Math.max(...folders.map(folder => folder.files.length));
-
-    // Create column header row
-    const headerRow = document.createElement("tr");
-    const topLeft = document.createElement("th");
-    topLeft.innerText = "Folder / File";
-    topLeft.style.padding = "10px";
-    topLeft.style.border = "1px solid #ccc";
-    topLeft.style.fontSize = "18px";            // Increase text size
-    topLeft.style.color = "#333366";            // Change color
-    headerRow.appendChild(topLeft);
-
-    for (let i = 0; i < maxColumns; i++) {
-      const th = document.createElement("th");
-      th.innerText = `${i + 1}`;
-      th.style.padding = "10px";
-      th.style.border = "1px solid #ccc";
-      th.style.backgroundColor = "#f0f0f0";
-      th.style.fontSize = "100px";              // Increase text size
-      th.style.color = "#333366";              // Change color
-      headerRow.appendChild(th);
-    }
-    table.appendChild(headerRow);
-
-    // Create data rows
-    folders.forEach(folder => {
+    groups.forEach(group => {
       const row = document.createElement("tr");
 
-      const folderNameCell = document.createElement("th");
-      folderNameCell.innerText = folder.folder;
-      folderNameCell.style.padding = "10px";
-      folderNameCell.style.fontSize = "18px"; // Match font size
-      folderNameCell.style.color = "#333366"; // Match color
-      row.appendChild(folderNameCell);
+      const labelCell = document.createElement("th");
+      labelCell.innerText = group.label;
+      labelCell.style.padding = "10px";
+      labelCell.style.border = "1px solid #ccc";
+      labelCell.style.fontSize = "18px";
+      labelCell.style.color = "#333366";
+      row.appendChild(labelCell);
 
-      for (let i = 0; i < maxColumns; i++) {
+      group.files.forEach(file => {
         const cell = document.createElement("td");
-        cell.style.height = "300px";  // 👈 Add a fixed height to cells
-
-        if (folder.files[i]) {
-          const canvas = document.createElement("canvas");
-          canvas.width = 200;
-          canvas.height = 200;
-          cell.appendChild(canvas);
-          createMeshViewer(canvas, `data/${folder.folder}/${folder.files[i]}`);
-        }
-
+        cell.style.height = "300px";
+        const canvas = document.createElement("canvas");
+        canvas.width = 200;
+        canvas.height = 200;
+        cell.appendChild(canvas);
+        createMeshViewer(canvas, `users/${folder.folder}/${file}`);
         row.appendChild(cell);
-      }
+      });
 
       table.appendChild(row);
-    }
-  );
+    });
   });
 
 function createMeshViewer(canvas, objPath) {
@@ -109,13 +101,11 @@ function createMeshViewer(canvas, objPath) {
       }
     });
 
-    object.position.sub(center);     // center it
+    object.position.sub(center);
     group.add(object);
-    group.scale.setScalar(scale);   // scale entire group
-
+    group.scale.setScalar(scale);
     scene.add(group);
 
-    // Animate
     const animate = () => {
       requestAnimationFrame(animate);
       group.rotation.y += 0.01;

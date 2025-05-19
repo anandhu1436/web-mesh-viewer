@@ -1,0 +1,4 @@
+Proxy time: 0.032694 seconds
+Grid time: 0.008409 seconds
+Marching time: 0.010574 seconds
+Uniform mesh time: 0.042589 seconds

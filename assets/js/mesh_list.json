@@ -1,1 +1,122 @@
-[{"folder": "first", "files": ["3d_bird.obj", "abc_00806605.obj", "axe13.obj", "axe5.obj"]}, {"folder": "second", "files": ["bell_pepper0.obj", "bird.obj", "bluewhale.obj", "bulbauser.obj"]}, {"folder": "third", "files": ["bunny_head.obj", "camel2.obj", "dog1.obj", "dolphin2.obj"]}]
+[
+  {
+    "folder": "amandine",
+    "files": [
+      "20250429085915_2_2_0_points_circumspheres.obj",
+      "20250429085915_2_2_0_points_final_mc.obj",
+      "20250429085915_2_2_0_strokes.obj",
+      "20250429090131_2_2_0_points_circumspheres.obj",
+      "20250429090131_2_2_0_points_final_mc.obj",
+      "20250429090131_2_2_0_strokes.obj",
+      "20250429090247_2_2_0_points_circumspheres.obj",
+      "20250429090247_2_2_0_points_final_mc.obj",
+      "20250429090247_2_2_0_strokes.obj",
+      "20250429090627_2_2_0_points_circumspheres.obj",
+      "20250429090627_2_2_0_points_final_mc.obj",
+      "20250429090627_2_2_0_strokes.obj",
+      "20250429092236_2_2_0_points_circumspheres.obj",
+      "20250429092236_2_2_0_points_final_mc.obj",
+      "20250429092236_2_2_0_strokes.obj"
+    ]
+  },
+  {
+    "folder": "antonine",
+    "files": [
+      "20250507103758_2_2_0_points_circumspheres.obj",
+      "20250507103758_2_2_0_points_final_mc.obj",
+      "20250507103758_2_2_0_strokes.obj",
+      "20250507104434_2_2_0_points_circumspheres.obj",
+      "20250507104434_2_2_0_points_final_mc.obj",
+      "20250507104434_2_2_0_strokes.obj",
+      "20250507105231_2_2_0_points_circumspheres.obj",
+      "20250507105231_2_2_0_points_final_mc.obj",
+      "20250507105231_2_2_0_strokes.obj",
+      "20250507110042_2_2_0_points_circumspheres.obj",
+      "20250507110042_2_2_0_points_final_mc.obj",
+      "20250507110042_2_2_0_strokes.obj"
+    ]
+  },
+  {
+    "folder": "zwang",
+    "files": [
+      "20250415071619_2_2_0_points_circumspheres.obj",
+      "20250415071619_2_2_0_points_final_mc.obj",
+      "20250415071619_2_2_0_strokes.obj",
+      "20250415071842_2_2_0_points_circumspheres.obj",
+      "20250415071842_2_2_0_points_final_mc.obj",
+      "20250415071842_2_2_0_strokes.obj",
+      "20250415072221_2_2_0_points_circumspheres.obj",
+      "20250415072221_2_2_0_points_final_mc.obj",
+      "20250415072221_2_2_0_strokes.obj",
+      "20250415073349_2_2_0_points_circumspheres.obj",
+      "20250415073349_2_2_0_points_final_mc.obj",
+      "20250415073349_2_2_0_strokes.obj"
+    ]
+  },
+  {
+    "folder": "lin",
+    "files": [
+      "20250417065509_2_2_0_strokes.obj",
+      "20250417065743_2_2_0_strokes.obj",
+      "20250417065921_2_2_0_points_circumspheres.obj",
+      "20250417065921_2_2_0_points_final_mc.obj",
+      "20250417065921_2_2_0_strokes.obj",
+      "20250417070558_2_2_0_points_circumspheres.obj",
+      "20250417070558_2_2_0_points_final_mc.obj",
+      "20250417070558_2_2_0_strokes.obj"
+    ]
+  },
+  {
+    "folder": "leon",
+    "files": [
+      "20250417071546_2_2_0_points_circumspheres.obj",
+      "20250417071546_2_2_0_points_final_mc.obj",
+      "20250417071546_2_2_0_strokes.obj",
+      "20250417071742_2_2_0_points_circumspheres.obj",
+      "20250417071742_2_2_0_points_final_mc.obj",
+      "20250417071742_2_2_0_strokes.obj",
+      "20250417072132_2_2_0_points_circumspheres.obj",
+      "20250417072132_2_2_0_points_final_mc.obj",
+      "20250417072132_2_2_0_strokes.obj",
+      "20250417072922_2_2_0_points_circumspheres.obj",
+      "20250417072922_2_2_0_points_final_mc.obj",
+      "20250417072922_2_2_0_strokes.obj"
+    ]
+  },
+  {
+    "folder": "wang",
+    "files": [
+      "20250509094358_2_2_0_points_circumspheres.obj",
+      "20250509094358_2_2_0_points_final_mc.obj",
+      "20250509094358_2_2_0_strokes.obj",
+      "20250509094702_2_2_0_points_circumspheres.obj",
+      "20250509094702_2_2_0_points_final_mc.obj",
+      "20250509094702_2_2_0_strokes.obj",
+      "20250509095112_2_2_0_points_circumspheres.obj",
+      "20250509095112_2_2_0_points_final_mc.obj",
+      "20250509095112_2_2_0_strokes.obj",
+      "20250509101111_2_2_0_points_circumspheres.obj",
+      "20250509101111_2_2_0_strokes.obj",
+      "20250509101111_2_2_0_strokes_circumspheres.obj",
+      "20250509101111_2_2_0_strokes_circumspheres.txt",
+      "20250509101111_2_2_0_strokes_filtered.ply",
+      "20250509101111_2_2_0_strokes_final_mc.obj",
+      "20250509101111_2_2_0_strokes_uniform.obj",
+      "20250509101111_2_2_0_strokestiming.txt"
+    ]
+  },
+  {
+    "folder": "gowtham",
+    "files": [
+      "20250415053013_2_2_0_points_circumspheres.obj",
+      "20250415053013_2_2_0_points_final_mc.obj",
+      "20250415053013_2_2_0_strokes.obj",
+      "20250415053406_2_2_0_points_circumspheres.obj",
+      "20250415053406_2_2_0_points_final_mc.obj",
+      "20250415053406_2_2_0_strokes.obj",
+      "20250415053555_2_2_0_points_circumspheres.obj",
+      "20250415053555_2_2_0_points_final_mc.obj",
+      "20250415053555_2_2_0_strokes.obj"
+    ]
+  }
+]
